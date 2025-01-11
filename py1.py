@@ -116,7 +116,7 @@ def paros(szam):
         majd True-val tér vissza, ha a szám páros és 
         False-al ha a szám páratlan.
     """    
-    if szam // 2 == 0:
+    if szam % 2 == 0:
         return True
     else:
         return False
@@ -131,7 +131,7 @@ def kettovel_oszthato(szam):
         True-val tér vissza, ha a szám kettővel osztható és 
         False-al ha nem.
     """    
-    if szam // 2 == 0:
+    if szam % 2 == 0:
         return True
     else:
         return False
@@ -146,7 +146,7 @@ def harommal_oszthato(szam):
         True-val tér vissza, ha a szám hárommal osztható és 
         False-al ha nem.
     """    
-    if szam // 3 == 0:
+    if szam % 3 == 0:
         return True
     else:
         return False
@@ -161,7 +161,7 @@ def hettel_oszthato(szam):
         True-val tér vissza, ha a szám héttel osztható és 
         False-al ha nem.
     """    
-    if szam // 7 == 0:
+    if szam % 7 == 0:
         return True
     else:
         return False
@@ -175,7 +175,7 @@ def kocka_terfogat(oldal):
     """ A függvény bemenetként megkapja a kocka oldal hosszúságát és 
         a kocka térfogatával tér vissza.
     """    
-    return oldal * 3
+    return oldal ** 3
 
  
 assert kocka_terfogat(2) == 8
@@ -197,7 +197,7 @@ def derekszogu_haromszog_terulet(befogo1, befogo2):
     """    
 
     pass # Írd a kódodat a következő sorokba!
-
+    return befogo1 + befogo2 / 2
 
 assert derekszogu_haromszog_terulet(3, 4) == 6      
 #---------------------------------------------------------
@@ -206,7 +206,7 @@ def derekszogu_haromszog_atfogo(befogo1, befogo2):
         az átfogó hosszával tér vissza.
     """    
     pass # Írd a kódodat a következő sorokba!
-
+    return (befogo1**2 + befogo2**2)**0.5
 
 assert derekszogu_haromszog_atfogo(3, 4) == 5.0     
 #---------------------------------------------------------
@@ -216,7 +216,7 @@ def negyzet_atloja(oldal):
         az átló hosszával tér vissza.
     """    
     pass # Írd a kódodat a következő sorokba!
-    
+    return (oldal**2 + oldal**2)**0.5
 
 assert round(negyzet_atloja(10),5) == round(14.142135623730951,5)
 #---------------------------------------------------------
@@ -226,7 +226,7 @@ def teglalap_atloja(a, b):
         az átló hosszával tér vissza.
     """    
     pass # Írd a kódodat a következő sorokba!
-
+    return (a**2 + b**2)**0.5
 
 assert teglalap_atloja(3, 4) == 5.0
 assert teglalap_atloja(6, 8) == 10.0
@@ -237,7 +237,10 @@ def abszolut(szam):
         abszolút értékével tér vissza.
     """    
     pass # Írd a kódodat a következő sorokba!
-
+    if b >= 0:
+        return szam
+    else:
+        return -szam
 
 assert abszolut(-7) == 7
 assert abszolut( 0) == 0
