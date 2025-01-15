@@ -185,7 +185,7 @@ def teglatest_terfogat(a, b, c):
     """ A függvény bemenetként megkapja a téglatest oldalainak hosszúságát és 
         a téglatest térfogatával tér vissza.
     """    
-    
+    return a * b * c
 
 
 assert teglatest_terfogat(2, 3, 4) == 24      
@@ -196,8 +196,8 @@ def derekszogu_haromszog_terulet(befogo1, befogo2):
         a háromszög területével tér vissza.
     """    
 
-    pass # Írd a kódodat a következő sorokba!
-    return befogo1 + befogo2 / 2
+    return befogo1 * befogo2 / 2 
+
 
 assert derekszogu_haromszog_terulet(3, 4) == 6      
 #---------------------------------------------------------
@@ -205,8 +205,8 @@ def derekszogu_haromszog_atfogo(befogo1, befogo2):
     """ A függvény bemenetként megkapja a befogók hosszát és 
         az átfogó hosszával tér vissza.
     """    
-    pass # Írd a kódodat a következő sorokba!
     return (befogo1**2 + befogo2**2)**0.5
+
 
 assert derekszogu_haromszog_atfogo(3, 4) == 5.0     
 #---------------------------------------------------------
@@ -214,9 +214,9 @@ assert derekszogu_haromszog_atfogo(3, 4) == 5.0
 def negyzet_atloja(oldal):
     """ A függvény bemenetként megkapja a négyzet oldalának hosszát és 
         az átló hosszával tér vissza.
-    """    
-    pass # Írd a kódodat a következő sorokba!
+    """
     return (oldal**2 + oldal**2)**0.5
+    
 
 assert round(negyzet_atloja(10),5) == round(14.142135623730951,5)
 #---------------------------------------------------------
@@ -225,8 +225,8 @@ def teglalap_atloja(a, b):
     """ A függvény bemenetként megkapja az oldalak hosszát és 
         az átló hosszával tér vissza.
     """    
-    pass # Írd a kódodat a következő sorokba!
     return (a**2 + b**2)**0.5
+
 
 assert teglalap_atloja(3, 4) == 5.0
 assert teglalap_atloja(6, 8) == 10.0
@@ -236,11 +236,11 @@ def abszolut(szam):
     """ A függvény a bemenő paraméterként kapott szám 
         abszolút értékével tér vissza.
     """    
-    pass # Írd a kódodat a következő sorokba!
-    if b >= 0:
+    if szam >= 0:
         return szam
     else:
         return -szam
+
 
 assert abszolut(-7) == 7
 assert abszolut( 0) == 0
